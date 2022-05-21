@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @EnvironmentObject private var userManager: UserManager
-    
+    @EnvironmentObject private var userManager: UserManager    
     @State private var name = ""
     
     var body: some View {
@@ -27,7 +26,7 @@ struct RegisterView: View {
                     Text("OK")
                 }
             }
-            .disabled(name.count > 2 ? false : true)
+            .disabled(name.count < 3)
         }
     }
     
